@@ -68,6 +68,13 @@ The **Clyde Dance Academy** is a full-featured course booking system designed fo
 | **NeDB**   | Lightweight document-based DB (like MongoDB but stored locally as `.db` files) |
 
 ---
+# 💻 How to Run Locally
+
+### ✅ Prerequisites
+Make sure you have installed:
+- Node.js (v18.x)
+- npm
+- Git
 
 ## 📁 Project Structure
 
