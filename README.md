@@ -8,18 +8,6 @@ A complete web-based booking platform for dance academies. This application allo
 
 ---
 
-## 📌 Table of Contents
-
-- [📖 Project Overview](#project-overview)
-- [🧩 Features](#features)
-- [🔧 Technologies Used](#technologies-used)
-- [📁 Project Structure](#project-structure)
-- [🚀 How to Run Locally](#how-to-run-locally)
-- [📦 Deployment to Heroku](#deployment-to-heroku)
-- [📂 Environment Variables](#environment-variables)
-- [🔐 Authentication Flow](#authentication-flow)
-- [💡 Future Enhancements](#future-enhancements)
-- [📄 License](#license)
 
 ---
 
@@ -45,9 +33,9 @@ The **Clyde Dance Academy** is a full-featured course booking system designed fo
 - View all courses in a dashboard
 - Add, edit, or delete courses
 - Add sessions and workshops to courses
-- View student enrolments per course
+- View users enrolments per course
 - View all users and delete or manage them
-- Add new admin or users from admin panel
+- Add new admin or users from the admin panel
 
 ---
 
