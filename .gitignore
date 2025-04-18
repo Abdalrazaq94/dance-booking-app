@@ -1,7 +1,12 @@
-# Node modules (dependencies)
+# Node dependencies
 node_modules/
 
 # Environment variables
+.env
+
+# Local database
+*.db
+*.nedb
 
 # Build / cache
 dist/
@@ -11,11 +16,12 @@ build/
 out/
 *.log
 
-# OS/system files
+# System files
 .DS_Store
 Thumbs.db
+.AppleDouble
 
-# VSCode or JetBrains config
+# IDE/editor config
 .vscode/
 .idea/
 
@@ -24,18 +30,16 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Tailwind output CSS (optional if it's generated)
+# Tailwind generated CSS (if built manually)
 public/css/style.css
 
-# Temp uploads or runtime
+# Temporary/runtime files
 tmp/
 temp/
 
-# Coverage reports
+# Test coverage
 coverage/
 
-# ZIPs and archives
+# Archives
 *.zip
-
-# Mac system file
-.AppleDouble
+*.tar
