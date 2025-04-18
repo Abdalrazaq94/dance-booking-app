@@ -92,7 +92,6 @@ dance-booking-app/
 │   └── public/            # public files 
 ├── users.db               # NeDB database file (auto-created)
 ├── index.js               # Main server entry point
-├── .env                   # JWT secret
 ├── .gitignore             # Ignored files
 ├── package.json           # Project metadata
 ├── Procfile               # Heroku config
