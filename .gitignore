@@ -2,11 +2,6 @@
 node_modules/
 
 # Environment variables
-.env
-
-# Local database
-*.db
-*.nedb
 
 # Build / cache
 dist/
