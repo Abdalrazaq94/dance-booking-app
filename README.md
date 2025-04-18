@@ -1,5 +1,104 @@
-In order to download and use the code examples provided you should clone the repository. 
-Assumimg you have Git installed on your computer (see https://github.com/git-guides/install-git) open a terminal window in Visual Studio Code ( or use a terminal window provided by your operating system). Type the following command to download the project from a remote server to the folder you are currently in locally
-git clone https://github.com/FionaMacRaeFairlie/lab10extended.git
-Use cd to move to the root directory of the cloned project and npm install to get the node dependancies set up. In this example you then have to set up an .env file at the root of the project and add the following line to it ACCESS_TOKEN_SECRET="Random string for using in Web Application Development 2 lab example" then run the project by typing node index.
+# 🩰 Clyde Dance Academy - Full Stack Booking Platform
 
+A complete web-based booking platform for dance academies. This application allows users to browse and book dance courses and sessions, while admins can manage everything through a protected admin dashboard.
+
+> 🌍 **Live URL:** _[https://dance-booking-6aa0c4beeef7.herokuapp.com/]_  
+> 🧠 Developed using: Node.js, Express, Mustache, Tailwind, NeDB, JWT, Bcrypt  
+> 🛠 Deployed on: **Heroku**
+
+---
+
+## 📌 Table of Contents
+
+- [📖 Project Overview](#project-overview)
+- [🧩 Features](#features)
+- [🔧 Technologies Used](#technologies-used)
+- [📁 Project Structure](#project-structure)
+- [🚀 How to Run Locally](#how-to-run-locally)
+- [📦 Deployment to Heroku](#deployment-to-heroku)
+- [📂 Environment Variables](#environment-variables)
+- [🔐 Authentication Flow](#authentication-flow)
+- [💡 Future Enhancements](#future-enhancements)
+- [📄 License](#license)
+
+---
+
+## 📖 Project Overview
+
+The **Clyde Dance Academy** is a full-featured course booking system designed for real-world use by dance schools or small institutions. The platform allows:
+
+- Regular users to register, log in, and book course sessions and workshops.
+- Admin users to add/edit/delete courses, manage users, view enrolments, and more.
+
+---
+
+## 🧩 Features
+
+### 🔓 Public User Features:
+- User registration and login
+- Secure JWT-based authentication
+- Browse available courses with full details
+- View and book sessions or workshops
+- Logout functionality
+
+### 🔐 Admin Dashboard:
+- View all courses in a dashboard
+- Add, edit, or delete courses
+- Add sessions and workshops to courses
+- View student enrolments per course
+- View all users and delete or manage them
+- Add new admin or users from admin panel
+
+---
+
+## 🔧 Technologies Used
+
+### 🖥 Frontend
+
+| Technology       | Purpose                                    |
+|------------------|---------------------------------------------|
+| **Mustache.js**  | Templating engine for rendering dynamic HTML |
+| **Tailwind CSS** | Utility-first modern CSS framework           |
+| **Bootstrap**    | Quick styling for forms and buttons         |
+| **jQuery**       | Optional DOM manipulation / interactivity   |
+
+### 🔙 Backend
+
+| Technology       | Purpose                                   |
+|------------------|--------------------------------------------|
+| **Node.js**      | JavaScript runtime                         |
+| **Express.js**   | Backend server framework                   |
+| **JWT**          | Secure authentication via tokens           |
+| **Bcrypt**       | Password hashing and verification          |
+| **dotenv**       | Load environment variables securely        |
+| **Cookie-parser**| Parse cookies for JWT-based auth           |
+
+### 🗂 Database
+
+| Technology | Purpose                                  |
+|------------|-------------------------------------------|
+| **NeDB**   | Lightweight document-based DB (like MongoDB but stored locally as `.db` files) |
+
+---
+
+## 📁 Project Structure
+
+```bash
+dance-booking-app/
+├── auth/                  # Middleware (auth.js)
+├── controllers/           # Route logic for admins and users
+├── models/                # DB logic (userModel, courseModel, etc.)
+├── public/
+│   └── css/               # Tailwind CSS styles
+├── routes/                # Route definitions
+├── views/
+│   ├── admin/             # Admin panel templates
+│   ├── user/              # Public views
+│   └── public/            # public files 
+├── users.db               # NeDB database file (auto-created)
+├── index.js               # Main server entry point
+├── .env                   # JWT secret
+├── .gitignore             # Ignored files
+├── package.json           # Project metadata
+├── Procfile               # Heroku config
+└── README.md              # You’re reading it!
