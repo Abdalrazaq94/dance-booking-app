@@ -1,0 +1,94 @@
+<html>
+<head>
+  {{>header}}
+</head>
+
+<body class="text-black dark:text-black">
+
+<!-- ABOUT Section -->
+<div class="w-full lg:h-screen h-full m-auto flex items-center justify-center py-20">
+  <div class="w-full h-full flex flex-col justify-center items-center sm:px-4 px-2">
+    <div class="lg:w-[90%] w-full mx-auto flex flex-col lg:gap-6 lg:flex-row items-center justify-center">
+      
+      <!-- Images Section -->
+      <div class="relative">
+        <!-- Side Image 1 -->
+        <img class="absolute z-20 lg:left-[2rem] -top-4 left-[1rem] lg:w-[8rem] lg:h-[8rem] sm:w-[6rem] sm:h-[6rem] w-[3rem] h-[3rem] rounded-full" src="https://images.unsplash.com/photo-1592833578500-1082e18665a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODR8fGRhbmNpbmd8ZW58MHx8MHx8fDA%3D" alt="Dance Style 1" />
+        <!-- Side Image 2 -->
+        <img class="absolute z-20 lg:top-[12rem] sm:top-[11rem] top-[5rem] sm:-left-[3rem] -left-[2rem] lg:w-[8rem] lg:h-[8rem] sm:w-[6rem] sm:h-[6rem] w-[3rem] h-[3rem] rounded-full" src="https://images.unsplash.com/photo-1550775552-fddce286443d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fGRhbmNpbmclMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D" alt="Dance Style 2" />
+        <!-- Side Image 3 -->
+        <img class="absolute z-20 lg:top-[23rem] sm:top-[20.5rem] top-[10.5rem] left-[2rem] lg:w-[8rem] lg:h-[8rem] sm:w-[6rem] sm:h-[6rem] w-[3rem] h-[3rem] rounded-full" src="https://images.unsplash.com/photo-1611879531844-24b7ddf40b26?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8fA%3D%3D" alt="Dance Style 3" />
+        
+        <!-- Main Image -->
+        <img class="rounded-full relative object-cover right-0 lg:w-[30rem] lg:h-[30rem] sm:w-[25rem] sm:h-[25rem] w-[12rem] h-[12rem] outline sm:outline-offset-[.77em] outline-offset-[.37em] outline-green-500" src="https://images.unsplash.com/photo-1652108993448-f37712676589?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGFuY2luZyUyMGJsYWNrfGVufDB8fDB8fHww" alt="Main Dance" />
+      </div>
+
+      <!-- Text Section -->
+      <div class="lg:w-[60%] p-4 w-full h-full shadow-xl shadow-green-300/40 flex flex-col justify-center items-center sm:px-6 px-4 rounded-xl">
+        <h2 class="text-4xl text-center text-green-600 dark:text-green-400 font-bold px-4 py-1 md:mt-0 mt-10">
+          About Dance Academy
+        </h2>
+        <p class="md:text-3xl text-2xl text-center text-gray-800 dark:text-gray-200 font-bold my-5">
+          Where Movement Becomes Expression
+        </p>
+        <p class="md:text-xl sm:text-lg text-base mt-2 text-justify sm:px-2 dark:text-black-300">
+          Dance Academy is a welcoming space for dancers of all levels and backgrounds. From graceful ballet to upbeat hip-hop and rhythmic salsa, our classes foster growth, confidence, and creativity. Whether you're preparing for the stage or stepping into a class for the first time, we offer sessions tailored to your journey. Join a vibrant community where learning meets joy, and every step is a celebration.
+        </p>
+
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{! location nd information  }}
+<section class="bg-gray-100 text-black">
+  <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
+    <div class="max-w-2xl lg:max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-black">Visit Our Dance Studio</h2>
+      <p class="mt-4 text-lg text-gray-700">
+        Located in the heart of Glasgow, our studio is easily accessible and designed to welcome dancers of all levels.
+      </p>
+    </div>
+
+    <div class="mt-16 lg:mt-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Map -->
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.8321347085673!2d-4.251806884486564!3d55.86091808058459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4888442be7b0b8cb%3A0xa8f8df1a1376c8b3!2sGlasgow%20City%20Centre!5e0!3m2!1sen!2suk!4v1619535367736!5m2!1sen!2suk"
+            width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Info -->
+        <div>
+          <div class="max-w-full mx-auto rounded-lg overflow-hidden shadow-md bg-white">
+            <div class="px-6 py-4">
+              <h3 class="text-lg font-bold text-black">Our Address</h3>
+              <p class="mt-1 text-gray-700">Dance Academy Studio<br>45 Renfield Street, Glasgow G2 1LP</p>
+            </div>
+
+            <div class="border-t border-gray-200 px-6 py-4">
+              <h3 class="text-lg font-bold text-black">Opening Hours</h3>
+              <p class="mt-1 text-gray-700">Mon – Fri: 10:00 AM – 8:00 PM</p>
+              <p class="mt-1 text-gray-700">Sat – Sun: 11:00 AM – 6:00 PM</p>
+            </div>
+
+            <div class="border-t border-gray-200 px-6 py-4">
+              <h3 class="text-lg font-bold text-black">Contact</h3>
+              <p class="mt-1 text-gray-700">Email: info@danceacademy.co.uk</p>
+              <p class="mt-1 text-gray-700">Phone: +44 141 123 4567</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{> footer }}
+</body>
+</html>

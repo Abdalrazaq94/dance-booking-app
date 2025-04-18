@@ -1,0 +1,17 @@
+<html>
+<head>
+  {{>header}}
+</head>
+<body class="container">
+  <h1>✅ Booking Confirmed</h1>
+  <p>Thank you, <strong>{{user}}</strong>!</p>
+  <p>You have successfully booked a session for:</p>
+  <ul>
+    <li><strong>Course ID:</strong> {{courseId}}</li>
+    <li><strong>Date:</strong> {{date}}</li>
+    <li><strong>Time:</strong> {{time}}</li>
+  </ul>
+  <a href="/courses" class="btn btn-primary mt-3">Back to Courses</a>
+  {{> footer }}
+</body>
+</html>

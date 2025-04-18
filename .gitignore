@@ -1,0 +1,41 @@
+# Node modules (dependencies)
+node_modules/
+
+# Environment variables
+
+# Build / cache
+dist/
+build/
+.cache/
+.next/
+out/
+*.log
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# VSCode or JetBrains config
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tailwind output CSS (optional if it's generated)
+public/css/style.css
+
+# Temp uploads or runtime
+tmp/
+temp/
+
+# Coverage reports
+coverage/
+
+# ZIPs and archives
+*.zip
+
+# Mac system file
+.AppleDouble

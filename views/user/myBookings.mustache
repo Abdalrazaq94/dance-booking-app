@@ -1,0 +1,40 @@
+<html>
+<head>
+  {{>header}}
+</head>
+<body class="container py-20">
+  <h2>My Bookings</h2>
+
+  {{#sessionBookings.length}}
+    <h4>Course Sessions</h4>
+    <ul class="list-group mb-4">
+      {{#sessionBookings}}
+        <li class="list-group-item">
+          <strong>Session Date:</strong> {{date}} <br>
+          <strong>Session Time:</strong> {{time}}
+        </li>
+      {{/sessionBookings}}
+    </ul>
+  {{/sessionBookings.length}}
+
+  {{#workshopBookings.length}}
+    <h4>Workshops</h4>
+    <ul class="list-group">
+      {{#workshopBookings}}
+        <li class="list-group-item">
+          <strong>Topic:</strong> {{topic}}<br>   
+          <strong>Date:</strong> {{date}}<br>
+          <strong>Time:</strong> {{time}}
+        </li>
+      {{/workshopBookings}}
+    </ul>
+  {{/workshopBookings.length}}
+
+  {{^hasBookings}}
+    <p>You have not booked any classes or workshops yet.</p>
+  {{/hasBookings}}
+
+  <a href="/courses" class="btn btn-primary mt-3">Browse Courses</a>
+  {{> footer }}
+</body>
+</html>

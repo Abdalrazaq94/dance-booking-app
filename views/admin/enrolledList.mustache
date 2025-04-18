@@ -1,0 +1,22 @@
+ <head>
+    {{> header_admin}}
+  </head>
+<h2>Enrolled Users</h2>
+
+<h4>Course: {{course.name}}</h4>
+
+{{#bookings}}
+  <div class="card mb-2">
+    <div class="card-body">
+      <p><strong>Name:</strong> {{username}}</p>
+      <p><strong>Email:</strong> {{email}}</p>
+      <p><strong>Booked At:</strong> {{bookedAt}}</p>
+    </div>
+  </div>
+{{/bookings}}
+
+{{^bookings}}
+<p>No one has enrolled in this course yet.</p>
+{{/bookings}}
+
+<a href="/admin" class="btn btn-secondary mt-3">Back to Dashboard</a>

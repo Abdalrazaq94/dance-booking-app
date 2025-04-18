@@ -1,0 +1,67 @@
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <head>
+   {{> header_admin}}
+
+  </head>
+  <body class="container-fluid">
+
+ 
+
+    <h2>Admin Dashboard</h2>
+    <p>Welcome, {{user}}</p>
+
+    <h3>All Courses</h3>
+
+    {{#courses}}
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{name}}</h5>
+          <p>{{description}}</p>
+          <p><strong>Location:</strong> {{location}}</p>
+          <p><strong>Price:</strong> £{{price}}</p>
+<button 
+  class="btn" 
+  style="background-color:#6c757d; color:white; margin-right:5px;"
+  onclick="window.location.href='/admin/edit-course/{{_id}}'">
+  Edit
+</button>
+
+<button 
+  class="btn" 
+  style="background-color:#17a2b8; color:white; margin-right:5px;"
+  onclick="window.location.href='/admin/enrolments/{{_id}}'">
+  View Enrolments
+</button>
+
+<button 
+  class="btn" 
+  style="background-color:#007bff; color:white; margin-right:5px;"
+  onclick="window.location.href='/admin/add-session/{{_id}}'">
+  Add Session
+</button>
+
+<button 
+  class="btn" 
+  style="background-color:#ffc107; color:black; margin-right:5px;"
+  onclick="window.location.href='/admin/add-workshop/{{_id}}'">
+  Add Workshop
+</button>
+
+<form action="/admin/delete-course/{{_id}}" method="POST" style="display:inline;">
+  <button class="btn" style="background-color:#dc3545; color:white;">
+    Delete
+  </button>
+</form>
+
+        </div>
+      </div>
+    {{/courses}}
+
+    {{^courses}}
+      <p>No courses available at the moment.</p>
+    {{/courses}}
+
+  </body>
+</html>

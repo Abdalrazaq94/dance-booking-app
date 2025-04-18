@@ -1,0 +1,45 @@
+<html>
+  <head>
+    {{>header}} <!-- This is your shared header partial -->
+  </head>
+  <body class="container py-20">
+    <h1>{{title}}</h1>
+    <h2>Create a New Account</h2>
+
+    <form method="POST" action="/register">
+      <div class="form-group">
+        <label for="username">User Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          name="username"
+          placeholder="Enter user name"
+          required
+        />
+      </div>
+ <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control" name="email" required>
+  </div> 
+      <div class="form-group">
+        <label for="pass">Password (min 8 characters)</label>
+        <input
+          type="password"
+          class="form-control"
+          id="pass"
+          name="pass"
+          minlength="8"
+          required
+        />
+      </div>
+
+ 
+
+      <div class="form-group mt-3">
+        <input type="submit" value="Register" class="btn btn-primary" />
+      </div>
+    </form>
+    {{> footer }}
+  </body>
+</html>

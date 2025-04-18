@@ -1,0 +1,82 @@
+<html>
+<head>
+  {{>header}}
+</head>
+<body class="container-fluid">
+
+  <h1>{{course.name}}</h1>
+  <p><strong>Description:</strong> {{course.description}}</p>
+  <p><strong>Duration:</strong> {{course.duration}}</p>
+  <p><strong>Location:</strong> {{course.location}}</p>
+  <p><strong>Price:</strong> £{{course.price}}</p>
+
+  <h3>Scheduled Sessions</h3>
+
+  {{#hasSessions}}
+    <ul class="list-group mb-3">
+      {{#sessions}}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div>
+            <strong>Date:</strong> {{date}} — <strong>Time:</strong> {{time}}
+          </div>
+          <form method="POST" action="/book/{{_id}}" class="booking-form" style="margin: 0;">
+            <input type="hidden" name="courseId" value="{{courseId}}">
+            <input type="hidden" name="date" value="{{date}}">
+            <input type="hidden" name="time" value="{{time}}">
+            <button type="submit" class="btn btn-success btn-sm">Book</button>
+          </form>
+        </li>
+      {{/sessions}}
+    </ul>
+  {{/hasSessions}}
+
+  {{^hasSessions}}
+    <p>No sessions scheduled yet.</p>
+  {{/hasSessions}}
+
+  {{#hasWorkshops}}
+    <h3 class="mt-4">Workshops</h3>
+    <ul class="list-group mb-3">
+      {{#workshops}}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div>
+            <strong>Workshop Topic:</strong> {{topic}}<br>
+            <strong>Date:</strong> {{date}} — <strong>Time:</strong> {{time}}
+          </div>
+          <form method="POST" action="/book/{{_id}}" class="booking-form" style="margin: 0;">
+            <input type="hidden" name="courseId" value="{{courseId}}">
+            <input type="hidden" name="date" value="{{date}}">
+            <input type="hidden" name="time" value="{{time}}">
+                    <input type="hidden" name="type" value="workshop">         
+                   <input type="hidden" name="topic" value="{{topic}}"> 
+            
+            <button type="submit" class="btn btn-success btn-sm">Book</button>
+          </form>
+        </li>
+      {{/workshops}}
+    </ul>
+  {{/hasWorkshops}}
+
+  {{^hasWorkshops}}
+    <p>No workshops listed yet.</p>
+  {{/hasWorkshops}}
+
+  <a href="/courses" class="btn btn-secondary mt-3">← Back to Courses</a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const userLoggedIn = {{#user}}true{{/user}}{{^user}}false{{/user}};
+      if (!userLoggedIn) {
+        const bookingForms = document.querySelectorAll('.booking-form');
+        bookingForms.forEach(form => {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('⚠️ Please Create account and log in to make a booking.');
+          });
+        });
+      }
+    });
+  </script>
+{{> footer }}
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "dance-booking-app",
+  "version": "1.0.0",
+  "description": "In order to download and use the code examples provided you should clone the repository.  Assumimg you have Git installed on your computer (see https://github.com/git-guides/install-git) open a terminal window in Visual Studio Code ( or use a terminal window provided by your operating system). Type the following command to download the project from a remote server to the folder you are currently in locally git clone https://github.com/FionaMacRaeFairlie/lab10extended.git Use cd to move to the root directory of the cloned project and npm install to get the node dependancies set up. In this example you then have to set up an .env file at the root of the project and add the following line to it ACCESS_TOKEN_SECRET=\"Random string for using in Web Application Development 2 lab example\" then run the project by typing node index.",
+  "keywords": [
+    "node.js",
+    "express"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build:css": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "bcrypt": "^5.0.1",
+    "bootstrap": "^5.1.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "gray-nedb": "^1.8.3",
+    "jquery": "^3.6.0",
+    "json-web-token": "^3.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mustache-express": "^1.3.2",
+    "nedb": "^1.8.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,32 @@
+
+ <head>
+    {{> header_admin}}
+  </head>
+<h2 class="text-2xl font-bold mb-4">User Management</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Username</th>
+      <th>Role</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#users}}
+    <tr>
+      <td>{{email}}</td>
+      <td>{{user}}</td>
+      <td>{{role}}</td>
+      <td>
+        {{#isAdmin}}
+        <a href="/admin/edit-admin/{{_id}}" class="btn btn-sm btn-warning">Edit</a>
+        {{/isAdmin}}
+        <form action="/admin/delete-user/{{_id}}" method="POST" style="display:inline;">
+          <button class="btn btn-sm btn-danger">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {{/users}}
+  </tbody>
+</table>

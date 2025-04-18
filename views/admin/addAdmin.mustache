@@ -1,0 +1,40 @@
+<html>
+<head>
+  {{>header_admin}} <!-- Shared header -->
+</head>
+<body class="container py-20">
+  <h1>Add New Account</h1>
+  <p class="text-muted mb-4">Admins can register a new user or another admin here.</p>
+
+  <form method="POST" action="/admin/add-admin">
+    <div class="form-group">
+      <label for="username">User Name</label>
+      <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" class="form-control" name="email" placeholder="Enter email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="pass">Password (min 8 characters)</label>
+      <input type="password" class="form-control" id="pass" name="pass" minlength="8" required />
+    </div>
+
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select class="form-control" name="role" id="role" required>
+        <option value="user">User</option>
+        <option value="admin">Organiser</option>
+      </select>
+    </div>
+
+    <div class="form-group mt-3">
+      <input type="submit" value="Create Account" class="btn btn-success" />
+    </div>
+  </form>
+
+  {{> footer }}
+</body>
+</html>
